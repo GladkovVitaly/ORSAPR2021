@@ -6,7 +6,7 @@ using CrowbarParameters;
 using CrowbarBuilder;
 using KompasConnector;
 
-namespace СrowbarUI
+namespace СrowbarUI 
 {
     /// <summary>
     /// Класс, который хранит и обрабатывает пользовательский интерфейс плагина.
