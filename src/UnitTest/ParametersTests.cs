@@ -58,6 +58,7 @@ namespace UnitTests
             Assert.AreEqual(testParameterValue, actualPropertyObject);
         }
            
+        //TODO: RSDN
         [TestCase(10, 0,  TestName = "Негативный тест метода SetParameterValueByType")]
         public void Parameters_GetUnCorrectValue(double testParameterValue,
             ParameterType parameterType)

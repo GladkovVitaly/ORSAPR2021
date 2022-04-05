@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using Kompas6API5;
 using Kompas6Constants3D;
 
+//TODO: RSDN
 namespace KompasConnector
 {
     /// <summary>

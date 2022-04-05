@@ -49,6 +49,7 @@ namespace CrowbarBuilder
                 -_parameters.Diameter, _parameters.WorkingAreaWidth + 
                 _parameters.WorkingPartHeight + _parameters.MainBodyLength, 1);
 
+            //TODO: RSDN
             var drummer = _parameters.Diameter / (2 * Math.Sin(_parameters.DrummerСorner*Math.PI / 360));
 
             iDocument2D.ksLineSeg(-_parameters.Diameter, 
@@ -56,12 +57,14 @@ namespace CrowbarBuilder
                 _parameters.MainBodyLength, 0.0, _parameters.WorkingAreaWidth + 
                 _parameters.WorkingPartHeight + _parameters.MainBodyLength + drummer, 1);
 
+            //TODO: RSDN
             iDocument2D.ksLineSeg(0.0, _parameters.WorkingAreaWidth + 
                 _parameters.WorkingPartHeight + _parameters.MainBodyLength + drummer, 0.0, 0, 3);
 
             iDefinition.EndEdit();
         }
 
+        //TODO: XML
         /// <summary>
         /// Метод для построения лома
         /// </summary>
@@ -73,6 +76,7 @@ namespace CrowbarBuilder
             _connector.GetNewPart();
             _parameters = parameters;
 
+            //TODO: RSDN
             ksEntity iSketch = _connector.KsPart.NewEntity((short)Obj3dType.o3d_sketch);
 
             CreateSketch(iSketch);
@@ -80,14 +84,17 @@ namespace CrowbarBuilder
 
             // Создаем обьект вращения
             ksEntity entity = _connector.KsPart.NewEntity((short)Obj3dType.o3d_bossRotated);
+            //TODO: RSDN
             ksBossRotatedDefinition iDefinition = entity.GetDefinition();
-
+            
+            //TODO: RSDN
             ksEntityCollection iCollection = _connector.KsPart.EntityCollection((short)Obj3dType.o3d_edge);
             iCollection.SelectByPoint(0, 0, 0);
             ksEntity iEdge = iCollection.Last();
             iSketch = iEdge.GetDefinition().GetOwnerEntity();
             iDefinition.SetSketch(iSketch);
 
+            //TODO: RSDN
             ksRotatedParam iRotatedParam = iDefinition.RotatedParam();
             iRotatedParam.angleNormal = 360.0;
             iRotatedParam.angleReverse = 360.0;
@@ -95,6 +102,7 @@ namespace CrowbarBuilder
             iRotatedParam.toroidShape = false;
             iCollection = _connector.KsPart.EntityCollection((short)Obj3dType.o3d_edge);
             iCollection.SelectByPoint(0, 0, 0);
+            //TODO: RSDN
             iEdge = iCollection.Last();
 
             entity.Create(); 

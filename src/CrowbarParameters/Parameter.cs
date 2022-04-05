@@ -97,6 +97,7 @@ namespace CrowbarParameters
             return value >= min && value <= max;
         }
 
+        //TODO: XML
         public bool Equals(Parameter other)
         {
             return this.ParameterValue == other.ParameterValue ||

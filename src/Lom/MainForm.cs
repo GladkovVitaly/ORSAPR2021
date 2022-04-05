@@ -13,6 +13,7 @@ namespace СrowbarUI
     /// </summary>
     public partial class MainForm : Form
     {
+        //TODO: RSDN
         /// <summary>
         /// Построитель лома
         /// </summary>
@@ -200,6 +201,7 @@ namespace СrowbarUI
 
             foreach (var textBoxParameterTypePair in _textBoxDictionary)
             {
+                //TODO: RSDN
                 textBoxParameterTypePair.Key.Text = _crowbarParameters.GetParameterValueByType(textBoxParameterTypePair.Value).ToString();
                 textBoxParameterTypePair.Key.BackColor = Color.White;
             }
